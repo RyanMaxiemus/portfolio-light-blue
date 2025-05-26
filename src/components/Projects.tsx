@@ -62,7 +62,7 @@ export function Projects() {
   }, [isVisible]);
 
   return (
-    <section id="projects" className="py-20" ref={sectionRef}>
+    <section id="projects" className="py-20 overflow-x-hidden" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Featured Projects</h2>
         
@@ -70,7 +70,7 @@ export function Projects() {
           {projects.map((project, index) => {
             const isLeftColumn = index % 2 === 0;
             const slideDirection = isLeftColumn ? 'slide-in-left' : 'slide-in-right';
-            const animationDelay = `${index * 200}ms`;
+            const animationDelay = `${index * 300}ms`; // Increased delay between cards
             
             return (
               <Card 

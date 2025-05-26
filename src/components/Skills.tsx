@@ -26,11 +26,11 @@ export function Skills() {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
           
-          // Animate each skill level
+          // Animate each skill level (slower animation)
           skills.forEach((skill, index) => {
             let current = 0;
             const target = skill.level;
-            const increment = target / 60; // 60 frames for smooth animation
+            const increment = target / 120; // 120 frames for slower animation (was 60)
             
             const timer = setInterval(() => {
               current += increment;
@@ -44,7 +44,7 @@ export function Skills() {
                 newLevels[index] = Math.round(current);
                 return newLevels;
               });
-            }, 16); // ~60fps
+            }, 25); // 25ms intervals for slower animation (was 16ms)
           });
         }
       },

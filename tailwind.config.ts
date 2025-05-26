@@ -128,9 +128,9 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-in-right': 'slide-in-right 0.8s ease-out',
-				'slide-in-left': 'slide-in-left 0.8s ease-out',
-				'bounce-settle': 'bounce-settle 1s ease-out 0.8s'
+				'slide-in-right': 'slide-in-right 1.2s ease-out', // Slower slide animation
+				'slide-in-left': 'slide-in-left 1.2s ease-out', // Slower slide animation
+				'bounce-settle': 'bounce-settle 1.5s ease-out 1.2s' // Delayed bounce to match slower slide
 			}
 		}
 	},
