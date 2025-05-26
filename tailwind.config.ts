@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -109,7 +108,19 @@ export default {
 					}
 				},
 				'slide-in-right': {
-					'0%': { transform: 'translateX(100%)' },
+					'0%': { transform: 'translateX(100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'slide-in-left': {
+					'0%': { transform: 'translateX(-100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'bounce-settle': {
+					'0%': { transform: 'translateX(0)' },
+					'20%': { transform: 'translateX(-10px)' },
+					'40%': { transform: 'translateX(5px)' },
+					'60%': { transform: 'translateX(-2px)' },
+					'80%': { transform: 'translateX(1px)' },
 					'100%': { transform: 'translateX(0)' }
 				}
 			},
@@ -117,7 +128,9 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-in-right': 'slide-in-right 0.3s ease-out'
+				'slide-in-right': 'slide-in-right 0.8s ease-out',
+				'slide-in-left': 'slide-in-left 0.8s ease-out',
+				'bounce-settle': 'bounce-settle 1s ease-out 0.8s'
 			}
 		}
 	},
