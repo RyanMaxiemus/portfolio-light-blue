@@ -48,22 +48,23 @@ Ensure you have Node.js and a package manager (npm, Yarn, or pnpm) installed on 
 
 1. **Clone the repository:**
 
-```bash
-git clone https://github.com/RyanMaxiemus/portfolio-light-blue.git
-```
+    ```bash
+    git clone https://github.com/RyanMaxiemus/portfolio-light-blue.git
+    ```
 
 2. **Navigate to the project directory:**
 
-```bash
-cd portfolio-light-blue
-```
+    ```bash
+    cd portfolio-light-blue
+    ```
 
 3. **Install dependencies:**
-It is imperative to install all project dependencies before proceeding with the build process.
 
-```bash
-npm install # Or yarn install, or pnpm install, based on your preferred package manager
-```
+    It is imperative to install all project dependencies before proceeding with the build process.
+
+    ```bash
+    npm install # Or yarn install, or pnpm install, based on your preferred package manager
+    ```
 
 ### Running the Development Server
 
