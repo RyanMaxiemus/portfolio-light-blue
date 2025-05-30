@@ -10,7 +10,7 @@ const skills = [
   { name: "Vite", level: 80 },
   { name: "shadcn/ui", level: 75 },
   { name: "AWS/Cloud Services", level: 85 },
-  { name: "Docker/DevOps", level: 70 },
+  { name: "Docker/DevOps", level: 80 },
   { name: "Git/GitHub", level: 95 },
 ];
 
