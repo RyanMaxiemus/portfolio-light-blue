@@ -74,7 +74,7 @@ After successfully installing the dependencies, you can launch the development s
 npm run dev # Or yarn dev, or pnpm dev
 ```
 
-The application will typically be accessible at `http://localhost:5173`. Vite's development server offers hot module replacement for an efficient development workflow.
+The application will typically be accessible at `http://localhost:8080`. Vite's development server offers hot module replacement for an efficient development workflow.
 
 ## 📦 Building for Production
 
