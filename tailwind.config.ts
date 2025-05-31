@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -132,7 +133,7 @@ export default {
 				'slide-in-left': 'slide-in-left 1.2s ease-out', // Slower slide animation
 				'bounce-settle': 'bounce-settle 1.5s ease-out 1.2s' // Delayed bounce to match slower slide
 			}
-		}
+		},
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;
