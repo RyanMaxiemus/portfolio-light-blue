@@ -5,14 +5,30 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * The root component for a sheet. Based on Radix UI Dialog.
+ */
 const Sheet = SheetPrimitive.Root
 
+/**
+ * A button that opens the sheet's content.
+ */
 const SheetTrigger = SheetPrimitive.Trigger
 
+/**
+ * A button that closes the sheet.
+ */
 const SheetClose = SheetPrimitive.Close
 
+/**
+ * A component that portals its children into the body.
+ * This is used to ensure the sheet is rendered on top of other content.
+ */
 const SheetPortal = SheetPrimitive.Portal
 
+/**
+ * A layer that covers the inert portion of the view when the sheet is open.
+ */
 const SheetOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
@@ -28,6 +44,9 @@ const SheetOverlay = React.forwardRef<
 ))
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
+/**
+ * Defines the visual styles for the sheet content, including its side positioning and animations.
+ */
 const sheetVariants = cva(
   "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
   {
@@ -47,10 +66,16 @@ const sheetVariants = cva(
   }
 )
 
+/**
+ * Props for the SheetContent component, extending Radix UI DialogContent props and sheetVariants.
+ */
 interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
   VariantProps<typeof sheetVariants> { }
 
+/**
+ * Container for the sheet's content. Includes an overlay and a close button by default.
+ */
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
@@ -63,6 +88,7 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
+      {/* Default close button for the sheet. */}
       <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
@@ -72,6 +98,9 @@ const SheetContent = React.forwardRef<
 ))
 SheetContent.displayName = SheetPrimitive.Content.displayName
 
+/**
+ * A container for the sheet's header, usually containing the title and description.
+ */
 const SheetHeader = ({
   className,
   ...props
@@ -86,6 +115,9 @@ const SheetHeader = ({
 )
 SheetHeader.displayName = "SheetHeader"
 
+/**
+ * A container for the sheet's footer, usually containing action buttons.
+ */
 const SheetFooter = ({
   className,
   ...props
@@ -100,6 +132,9 @@ const SheetFooter = ({
 )
 SheetFooter.displayName = "SheetFooter"
 
+/**
+ * An accessible title for the sheet.
+ */
 const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
@@ -112,6 +147,9 @@ const SheetTitle = React.forwardRef<
 ))
 SheetTitle.displayName = SheetPrimitive.Title.displayName
 
+/**
+ * An optional, accessible description for the sheet.
+ */
 const SheetDescription = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
@@ -128,4 +166,3 @@ export {
   Sheet, SheetClose,
   SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger
 }
-

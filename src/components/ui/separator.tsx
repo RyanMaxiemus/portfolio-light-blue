@@ -3,6 +3,11 @@ import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * A visual separator line. Can be horizontal or vertical.
+ * @property {"horizontal" | "vertical"} [orientation="horizontal"] - The orientation of the separator.
+ * @property {boolean} [decorative=true] - Whether the separator is decorative or semantic.
+ */
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>

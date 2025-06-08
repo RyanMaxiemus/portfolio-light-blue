@@ -4,6 +4,9 @@ import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { ButtonProps, buttonVariants } from "@/components/ui/button"
 
+/**
+ * The main container for pagination components.
+ */
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
   <nav
     role="navigation"
@@ -14,6 +17,9 @@ const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
 )
 Pagination.displayName = "Pagination"
 
+/**
+ * A list container for pagination items (links, ellipsis, etc.).
+ */
 const PaginationContent = React.forwardRef<
   HTMLUListElement,
   React.ComponentProps<"ul">
@@ -26,6 +32,9 @@ const PaginationContent = React.forwardRef<
 ))
 PaginationContent.displayName = "PaginationContent"
 
+/**
+ * An individual item within the pagination content list.
+ */
 const PaginationItem = React.forwardRef<
   HTMLLIElement,
   React.ComponentProps<"li">
@@ -34,11 +43,18 @@ const PaginationItem = React.forwardRef<
 ))
 PaginationItem.displayName = "PaginationItem"
 
+/**
+ * Props for the PaginationLink component.
+ * @property {boolean} [isActive] - Whether the link represents the current page.
+ */
 type PaginationLinkProps = {
   isActive?: boolean
 } & Pick<ButtonProps, "size"> &
   React.ComponentProps<"a">
 
+/**
+ * A link for a pagination item, styled as a button.
+ */
 const PaginationLink = ({
   className,
   isActive,
@@ -59,6 +75,9 @@ const PaginationLink = ({
 )
 PaginationLink.displayName = "PaginationLink"
 
+/**
+ * A pagination link for navigating to the previous page.
+ */
 const PaginationPrevious = ({
   className,
   ...props
@@ -75,6 +94,9 @@ const PaginationPrevious = ({
 )
 PaginationPrevious.displayName = "PaginationPrevious"
 
+/**
+ * A pagination link for navigating to the next page.
+ */
 const PaginationNext = ({
   className,
   ...props
@@ -91,6 +113,9 @@ const PaginationNext = ({
 )
 PaginationNext.displayName = "PaginationNext"
 
+/**
+ * An ellipsis item, used to indicate a gap in page numbers.
+ */
 const PaginationEllipsis = ({
   className,
   ...props

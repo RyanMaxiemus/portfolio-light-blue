@@ -1,5 +1,8 @@
 import { cn } from "@/lib/utils"
 
+/**
+ * A placeholder component to indicate that content is loading.
+ */
 function Skeleton({
   className,
   ...props

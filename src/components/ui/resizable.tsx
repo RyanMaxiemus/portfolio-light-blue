@@ -3,6 +3,9 @@ import * as ResizablePrimitive from "react-resizable-panels"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * A container for a group of resizable panels.
+ */
 const ResizablePanelGroup = ({
   className,
   ...props
@@ -16,8 +19,15 @@ const ResizablePanelGroup = ({
   />
 )
 
+/**
+ * An individual resizable panel within a ResizablePanelGroup.
+ */
 const ResizablePanel = ResizablePrimitive.Panel
 
+/**
+ * The handle used to resize panels within a ResizablePanelGroup.
+ * @property {boolean} [withHandle] - If true, displays a visual grip icon on the handle.
+ */
 const ResizableHandle = ({
   withHandle,
   className,
@@ -32,6 +42,7 @@ const ResizableHandle = ({
     )}
     {...props}
   >
+    {/* Optional visual grip icon for the handle. */}
     {withHandle && (
       <div className="z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-border">
         <GripVertical className="h-2.5 w-2.5" />
