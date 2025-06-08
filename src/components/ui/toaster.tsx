@@ -8,6 +8,9 @@ import {
   ToastViewport,
 } from "@/components/ui/toast"
 
+/**
+ * A component that renders all active toasts using the `useToast` hook.
+ */
 export function Toaster() {
   const { toasts } = useToast()
 
