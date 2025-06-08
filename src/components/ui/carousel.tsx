@@ -7,20 +7,41 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
+/**
+ * Type for the Embla Carousel API.
+ */
 type CarouselApi = UseEmblaCarouselType[1]
+/**
+ * Type for the parameters of the `useEmblaCarousel` hook.
+ */
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
+/**
+ * Type for the options passed to `useEmblaCarousel`.
+ */
 type CarouselOptions = UseCarouselParameters[0]
+/**
+ * Type for the plugins passed to `useEmblaCarousel`.
+ */
 type CarouselPlugin = UseCarouselParameters[1]
 
+/**
+ * Props for the main Carousel component.
+ * @property {CarouselOptions} [opts] - Options for the Embla Carousel.
+ * @property {CarouselPlugin} [plugins] - Plugins for the Embla Carousel.
+ * @property {"horizontal" | "vertical"} [orientation="horizontal"] - The orientation of the carousel.
+ * @property {(api: CarouselApi) => void} [setApi] - Callback to get the Embla Carousel API instance.
+ */
 type CarouselProps = {
   opts?: CarouselOptions
   plugins?: CarouselPlugin
   orientation?: "horizontal" | "vertical"
   setApi?: (api: CarouselApi) => void
 }
-
+/**
+ * Props for the CarouselContext, providing carousel state and controls to child components.
+ */
 type CarouselContextProps = {
-  carouselRef: ReturnType<typeof useEmblaCarousel>[0]
+  carouselRef: ReturnType<typeof useEmblaCarousel>[0] // The ref for the carousel viewport.
   api: ReturnType<typeof useEmblaCarousel>[1]
   scrollPrev: () => void
   scrollNext: () => void
@@ -28,8 +49,15 @@ type CarouselContextProps = {
   canScrollNext: boolean
 } & CarouselProps
 
+/**
+ * React context to share carousel state and methods.
+ */
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
 
+/**
+ * Custom hook to access the CarouselContext.
+ * Throws an error if used outside of a <Carousel /> component.
+ */
 function useCarousel() {
   const context = React.useContext(CarouselContext)
 
@@ -40,6 +68,9 @@ function useCarousel() {
   return context
 }
 
+/**
+ * The main Carousel component. It initializes Embla Carousel and provides context for its children.
+ */
 const Carousel = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CarouselProps
@@ -66,6 +97,9 @@ const Carousel = React.forwardRef<
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
 
+    /**
+     * Callback executed when a slide is selected or the carousel is re-initialized.
+     */
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
         return
@@ -75,14 +109,23 @@ const Carousel = React.forwardRef<
       setCanScrollNext(api.canScrollNext())
     }, [])
 
+    /**
+     * Scrolls to the previous slide.
+     */
     const scrollPrev = React.useCallback(() => {
       api?.scrollPrev()
     }, [api])
 
+    /**
+     * Scrolls to the next slide.
+     */
     const scrollNext = React.useCallback(() => {
       api?.scrollNext()
     }, [api])
 
+    /**
+     * Handles keyboard navigation (ArrowLeft and ArrowRight).
+     */
     const handleKeyDown = React.useCallback(
       (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key === "ArrowLeft") {
@@ -96,6 +139,9 @@ const Carousel = React.forwardRef<
       [scrollPrev, scrollNext]
     )
 
+    /**
+     * Effect to pass the Embla API instance via the `setApi` prop.
+     */
     React.useEffect(() => {
       if (!api || !setApi) {
         return
@@ -104,6 +150,9 @@ const Carousel = React.forwardRef<
       setApi(api)
     }, [api, setApi])
 
+    /**
+     * Effect to register event listeners for 'select' and 'reInit' events.
+     */
     React.useEffect(() => {
       if (!api) {
         return
@@ -148,6 +197,9 @@ const Carousel = React.forwardRef<
 )
 Carousel.displayName = "Carousel"
 
+/**
+ * Container for the carousel slides. This is the scrollable area.
+ */
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -170,6 +222,9 @@ const CarouselContent = React.forwardRef<
 })
 CarouselContent.displayName = "CarouselContent"
 
+/**
+ * Represents an individual slide within the carousel.
+ */
 const CarouselItem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -192,6 +247,9 @@ const CarouselItem = React.forwardRef<
 })
 CarouselItem.displayName = "CarouselItem"
 
+/**
+ * Button to navigate to the previous slide in the carousel.
+ */
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
@@ -221,6 +279,9 @@ const CarouselPrevious = React.forwardRef<
 })
 CarouselPrevious.displayName = "CarouselPrevious"
 
+/**
+ * Button to navigate to the next slide in the carousel.
+ */
 const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>

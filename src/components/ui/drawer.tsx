@@ -3,6 +3,10 @@ import { Drawer as DrawerPrimitive } from "vaul"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * The root component for a drawer.
+ * @property {boolean} [shouldScaleBackground=true] - Whether the background should scale when the drawer is open.
+ */
 const Drawer = ({
   shouldScaleBackground = true,
   ...props
@@ -14,12 +18,25 @@ const Drawer = ({
 )
 Drawer.displayName = "Drawer"
 
+/**
+ * A button that opens the drawer's content.
+ */
 const DrawerTrigger = DrawerPrimitive.Trigger
 
+/**
+ * A component that portals its children into the body.
+ * This is used to ensure the drawer is rendered on top of other content.
+ */
 const DrawerPortal = DrawerPrimitive.Portal
 
+/**
+ * A button that closes the drawer.
+ */
 const DrawerClose = DrawerPrimitive.Close
 
+/**
+ * A layer that covers the inert portion of the view when the drawer is open.
+ */
 const DrawerOverlay = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
@@ -32,6 +49,9 @@ const DrawerOverlay = React.forwardRef<
 ))
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName
 
+/**
+ * Container for the drawer's content. Includes an overlay and a drag handle by default.
+ */
 const DrawerContent = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>
@@ -46,6 +66,7 @@ const DrawerContent = React.forwardRef<
       )}
       {...props}
     >
+      {/* A visual handle indicating the drawer can be dragged/closed. */}
       <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />
       {children}
     </DrawerPrimitive.Content>
@@ -53,6 +74,9 @@ const DrawerContent = React.forwardRef<
 ))
 DrawerContent.displayName = "DrawerContent"
 
+/**
+ * A container for the drawer's header, usually containing the title and description.
+ */
 const DrawerHeader = ({
   className,
   ...props
@@ -64,6 +88,9 @@ const DrawerHeader = ({
 )
 DrawerHeader.displayName = "DrawerHeader"
 
+/**
+ * A container for the drawer's footer, usually containing action buttons.
+ */
 const DrawerFooter = ({
   className,
   ...props
@@ -75,6 +102,9 @@ const DrawerFooter = ({
 )
 DrawerFooter.displayName = "DrawerFooter"
 
+/**
+ * An accessible title for the drawer.
+ */
 const DrawerTitle = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
@@ -90,6 +120,9 @@ const DrawerTitle = React.forwardRef<
 ))
 DrawerTitle.displayName = DrawerPrimitive.Title.displayName
 
+/**
+ * An optional, accessible description for the drawer.
+ */
 const DrawerDescription = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>

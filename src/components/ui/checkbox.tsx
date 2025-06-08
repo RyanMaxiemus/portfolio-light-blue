@@ -4,6 +4,9 @@ import { Check } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * A control that allows the user to toggle between checked and not checked.
+ */
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
@@ -16,6 +19,7 @@ const Checkbox = React.forwardRef<
     )}
     {...props}
   >
+    {/* Indicator for the checked state, displaying a check mark. */}
     <CheckboxPrimitive.Indicator
       className={cn("flex items-center justify-center text-current")}
     >
