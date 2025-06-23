@@ -60,7 +60,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">Email</p>
-                  <p className="text-muted-foreground">john@example.com</p>
+                  <p className="text-muted-foreground">Ryan@RyanMaxie.tech</p>
                 </div>
               </div>
               
@@ -70,7 +70,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">Phone</p>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+1 (251) 533-9771</p>
                 </div>
               </div>
               
@@ -80,7 +80,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">Location</p>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-muted-foreground">Mobile, AL</p>
                 </div>
               </div>
             </div>

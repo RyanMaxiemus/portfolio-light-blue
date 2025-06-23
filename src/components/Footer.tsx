@@ -28,13 +28,13 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-foreground">Connect</h4>
             <div className="flex space-x-4">
-              <a href="mailto:john@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:ryan@ryanmaxie.tech" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
-              <a href="https://github.com/johndeveloper" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/ryanmaxiemus" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="tel:+15551234567" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+12515339771" className="text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="w-5 h-5" />
               </a>
             </div>
@@ -42,7 +42,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2024 John Developer. All rights reserved.</p>
+          <p>&copy; 2025 Ryan Maxie. All rights reserved.</p>
         </div>
       </div>
     </footer>

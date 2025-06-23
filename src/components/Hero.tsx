@@ -17,7 +17,7 @@ export function Hero() {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary to-blue-accent-400 bg-clip-text text-transparent">
-            John Developer
+            Ryan Maxie
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Full-Stack Developer crafting beautiful, functional web experiences
