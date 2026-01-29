@@ -1,19 +1,21 @@
-
 export function About() {
   return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 text-foreground">About Me</h2>
-          <div className="text-lg text-muted-foreground space-y-6">
+    <section
+      id='about'
+      className='py-20 bg-muted/30'
+    >
+      <div className='container mx-auto px-4'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <h2 className='text-4xl font-bold mb-8 text-foreground'>About Me</h2>
+          <div className='text-lg text-muted-foreground space-y-6'>
             <p>
-              I'm a passionate full-stack developer with over 5 years of experience building web, mobile, and desktop applications. I love turning complex problems into simple, beautiful designs that provide excellent user experiences.
-            </p>
-            <p>
-              My expertise spans across modern JavaScript frameworks, backend technologies, Python, and cloud platforms. I'm constantly learning new technologies and best practices to stay at the forefront of web and software development.
-            </p>
-            <p>
-              When I'm not coding, you can find me contributing to open-source projects, writing technical blog posts, or exploring the latest developments in AI.
+              I’ve been living in the stack since 2018, evolving from a standard web dev
+              to an AI-driven builder. My obsession? Leveraging Generative AI (shoutout to
+              Gemini) to solve the "impossible" parts of the dev lifecycle. Whether I’m
+              fine-tuning LLM workflows or crafting high-performance backend systems, I’m
+              all about creating tools that actually make life easier. When I’m not
+              pushing code to GitHub, I’m probably analyzing sports data or exploring the
+              intersection of Psychology and Tech.
             </p>
           </div>
         </div>

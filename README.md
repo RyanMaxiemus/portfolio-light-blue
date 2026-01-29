@@ -1,111 +1,91 @@
-# 🚀 Professional Portfolio Website
+# 🌊 Portfolio: Light Blue
 
-Welcome to `portfolio-light-blue`, my personal portfolio website designed to showcase my capabilities and projects as a full-stack developer. With a keen interest in Artificial Intelligence, gaming, and emerging technologies, this platform is crafted to reflect my expertise and dedication to the field. The chosen light blue aesthetic provides a clean, modern, and visually appealing interface.
+> A modern, responsive, and highly customizable personal portfolio template built with React, TypeScript, and Tailwind CSS, designed for full-stack developers.
 
-This project leverages contemporary web development tools to ensure a robust, efficient, and user-friendly experience. It incorporates both light and dark mode functionalities, prioritizing user comfort and accessibility.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Tech: React](https://img.shields.io/badge/Tech-React-61DAFB?logo=react&logoColor=black)](https://reactjs.org/)
+[![Tech: TypeScript](https://img.shields.io/badge/Tech-TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tech: Tailwind CSS](https://img.shields.io/badge/Tech-Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-## ✨ Key Features
+---
 
-* **Modern and Intuitive Design:** Features a clean layout and a light blue theme, optimized for visual clarity and user engagement.
+## 🧐 What is this?
 
-* **Dynamic Theme Switching:** Includes a toggle for seamless transition between light and dark modes, enhancing user preference and reducing eye strain.
+**Portfolio: Light Blue** is a clean, performance-optimized template for developers who want to showcase their work with a modern aesthetic. It is a single-page application (SPA) built on the **Vite** development server, leveraging the power of **React** and **TypeScript** for a robust and scalable frontend. The design is fully responsive and utilizes **Tailwind CSS** for utility-first styling, complemented by the beautiful, accessible components from **shadcn/ui**.
 
-* **Fully Responsive Layout:** Engineered to provide an optimal viewing experience across a wide range of devices, including desktops, 2-in-1 laptops (such as the Dell Inspiron 7573), and mobile devices, ensuring no horizontal scrolling.
+This template is designed to be a starting point—a boilerplate that you can quickly fork, customize, and deploy to represent your professional brand. It includes all the essential sections: Hero, About, Skills & Expertise, Featured Projects, and a Contact form.
 
-* **Advanced Technology Stack:** Developed using React, Vite, and Tailwind CSS, resulting in a high-performance, maintainable, and scalable codebase.
+## 🛠️ Tech Stack
 
-* **Integrated shadcn/ui Components:** Utilizes a library of pre-built, accessible, and highly customizable UI components to accelerate development and ensure consistency.
+This project is a modern, component-driven frontend application.
 
-* **TypeScript Implementation:** Employs TypeScript for enhanced code quality, type safety, and early detection of potential errors, contributing to a more reliable application.
+| Component      | Technology     | Key Libraries/Frameworks                    |
+| :------------- | :------------- | :------------------------------------------ |
+| **Framework**  | React          | React 18, TypeScript                        |
+| **Build Tool** | Vite           | Vite 6.x, @vitejs/plugin-react-swc          |
+| **Styling**    | Tailwind CSS   | PostCSS, Autoprefixer, shadcn/ui (Radix UI) |
+| **Routing**    | React Router   | `react-router-dom`                          |
+| **State/Data** | TanStack Query | `@tanstack/react-query`                     |
+| **Icons**      | Lucide         | `lucide-react`                              |
 
-## 🛠️ Technology Stack
+## 🚀 Quick Start
 
-This project is built upon a robust selection of modern web development technologies:
-
-* [**React**](https://react.dev/): A declarative, component-based JavaScript library for building user interfaces.
-
-* [**Vite**](https://vitejs.dev/): A next-generation frontend tooling that provides an exceptionally fast development server and optimized build processes.
-
-* [**TypeScript**](https://www.typescriptlang.org/): A superset of JavaScript that adds static typing, improving code predictability and maintainability.
-
-* [**Tailwind CSS**](https://tailwindcss.com/): A utility-first CSS framework that enables rapid styling and consistent design application.
-
-* [**shadcn/ui**](https://ui.shadcn.com/): A collection of reusable UI components built on Radix UI and styled with Tailwind CSS, emphasizing accessibility and customization.
-
-* [**ESLint**](https://eslint.org/): A static code analysis tool used to identify problematic patterns found in JavaScript and TypeScript code, ensuring code quality and consistency.
-
-* [**PostCSS**](https://postcss.org/): A tool for transforming CSS with JavaScript plugins, used for various CSS processing tasks.
-
-## 🚀 Getting Started (Local Development Setup)
-
-To set up and run this project on your local machine, please follow the instructions below.
+The following instructions are optimized for a Linux environment (**Ubuntu/Debian**) and assume you have a Node.js environment set up.
 
 ### Prerequisites
 
-Ensure you have Node.js and a package manager (npm, Yarn, or pnpm) installed on your system. For users on Ubuntu 25.04, these tools are commonly pre-installed or easily installable.
+You must have **Node.js (v18 or higher)** and a package manager like **npm** or **pnpm** installed.
 
-### Installation
+1.  **Clone the repository**
 
-1. **Clone the repository:**
+    Start by cloning the repository to your local machine and navigating into the project directory.
 
     ```bash
     git clone https://github.com/RyanMaxiemus/portfolio-light-blue.git
-    ```
-
-2. **Navigate to the project directory:**
-
-    ```bash
     cd portfolio-light-blue
     ```
 
-3. **Install dependencies:**
+2.  **Install Dependencies**
 
-    It is imperative to install all project dependencies before proceeding with the build process.
+    Install all necessary project dependencies using npm.
 
     ```bash
-    npm install # Or yarn install, or pnpm install, based on your preferred package manager
+    npm install
     ```
 
-### Running the Development Server
+3.  **Run the Development Server**
 
-After successfully installing the dependencies, you can launch the development server:
+    Launch the local development server. This will typically run on `http://localhost:8080` as configured in `vite.config.ts`.
 
-```bash
-npm run dev # Or yarn dev, or pnpm dev
-```
+    ```bash
+    npm run dev
+    ```
 
-The application will typically be accessible at `http://localhost:8080`. Vite's development server offers hot module replacement for an efficient development workflow.
+    The application will automatically open in your browser, and changes to the source code will trigger a hot reload.
 
-## 📦 Building for Production
+4.  **Build for Production**
 
-To generate a production-ready build of the application, execute the following command:
+    To create a production-ready build, run the following command. The optimized static files will be placed in the `dist` directory.
 
-```bash
-npm run build # Or yarn build, or pnpm build
-```
+    ```bash
+    npm run build
+    ```
 
-This command will compile and optimize all source code, assets, and dependencies into a `dist` folder. The contents of this `dist` folder are suitable for deployment to a web server.
+## 📸 Preview
 
-## 👋 Contribution Guidelines
+![Portfolio: Light Blue - Landing](src/assets/images/portfolio-light-blue-screenshot-01.png)
+![Portfolio: Light Blue - About Me](src/assets/images/portfolio-light-blue-screenshot-02.png)
+![Portfolio: Light Blue - Projects](src/assets/images/portfolio-light-blue-screenshot-03.png)
+![Portfolio: Light Blue - Skills](src/assets/images/portfolio-light-blue-screenshot-04.png)
 
-Contributions to this project are welcome. If you identify any bugs, have feature suggestions, or propose improvements, please consider the following:
+## 🤝 Contributing
 
-* Submit an issue to report bugs or propose new features.
+Found a bug? Have an idea for a new component, a better way to handle state, or a suggestion for a new feature? We welcome all contributions! This project is a community effort to create the best possible portfolio template.
 
-* Fork the repository and create a pull request with your modifications.
+1.  **Open an Issue:** Before submitting a Pull Request, please open an issue to discuss the bug or feature you're working on. This helps us coordinate and ensures your effort aligns with the project's direction.
+2.  **Fork and Branch:** Fork the repository and create a new branch for your contribution. Use a descriptive name like `feat/add-dark-mode` or `fix/contact-form-bug`.
+3.  **Code and Commit:** Write clean, well-documented code. Commit messages should be descriptive and follow a conventional format (e.g., `feat: add dark mode toggle`).
+4.  **Submit a PR:** Submit a Pull Request against the `main` branch. We'll review it as quickly as possible and appreciate your patience.
 
-I am committed to continuous improvement and actively seek opportunities to integrate new advancements, particularly in the realm of Artificial Intelligence, into my development practices.
-
-## 📄 License
-
-This project is open-sourced under the [MIT License](LICENSE). This license permits the free use, modification, and distribution of the software.
-
-## 📧 Contact Information
-
-For inquiries, collaboration opportunities, or discussions related to AI, gaming, or technological advancements, please feel free to connect:
-
-* **GitHub:** [RyanMaxiemus](https://github.com/RyanMaxiemus)
-
-* **Portfolio:** [RyanMaxie.tech](https://RyanMaxie.tech)
-
-Thank you for your interest in this project.
+Let's make this the go-to portfolio template for modern developers, together.

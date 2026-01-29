@@ -1,17 +1,17 @@
-import { Progress } from "@/components/ui/progress";
-import { useEffect, useRef, useState } from "react";
+import { Progress } from '@/components/ui/progress';
+import { useEffect, useRef, useState } from 'react';
 
 const skills = [
-  { name: "JavaScript/TypeScript", level: 95 },
-  { name: "React/Next.js", level: 90 },
-  { name: "Node.js/Express", level: 85 },
-  { name: "Python/Django", level: 80 },
-  { name: "Tailwind CSS", level: 90 },
-  { name: "Vite", level: 80 },
-  { name: "shadcn/ui", level: 75 },
-  { name: "AWS/Cloud Services", level: 85 },
-  { name: "Docker/DevOps", level: 80 },
-  { name: "Git/GitHub", level: 95 },
+  { name: 'JavaScript/TypeScript', level: 90 },
+  { name: 'React/Vite', level: 85 },
+  { name: 'Node.js/Express', level: 85 },
+  { name: 'Python/FastAPI', level: 80 },
+  { name: 'Gemini API', level: 85 },
+  { name: 'Ollama', level: 80 },
+  { name: 'Open API', level: 75 },
+  { name: 'AWS/Cloud Services', level: 75 },
+  { name: 'Docker/DevOps', level: 80 },
+  { name: 'Git/GitHub', level: 95 }
 ];
 
 export function Skills() {
@@ -24,28 +24,28 @@ export function Skills() {
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
-          
+
           // Animate each skill level (slower animation)
           skills.forEach((skill, index) => {
             let current = 0;
             const target = skill.level;
-            
+
             const increment = target / 120; // 120 frames for slower animation (was 60)
-            
+
             const timer = setInterval(() => {
               current += increment;
-              
+
               if (current >= target) {
                 current = target;
-                
+
                 clearInterval(timer);
               }
-              
+
               setAnimatedLevels(prev => {
                 const newLevels = [...prev];
-                
+
                 newLevels[index] = Math.round(current);
-                
+
                 return newLevels;
               });
             }, 25); // 25ms intervals for slower animation (was 16ms)
@@ -63,34 +63,34 @@ export function Skills() {
   }, [isVisible]);
 
   return (
-    <section id="skills" className="py-20 bg-muted/30" ref={sectionRef}>
-      
-      <div className="container mx-auto px-4">
-        
-        <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Skills & Expertise</h2>
-        
-        <div className="max-w-4xl mx-auto">
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
+    <section
+      id='skills'
+      className='py-20 bg-muted/30'
+      ref={sectionRef}
+    >
+      <div className='container mx-auto px-4'>
+        <h2 className='text-4xl font-bold text-center mb-12 text-foreground'>
+          Skills & Expertise
+        </h2>
+
+        <div className='max-w-4xl mx-auto'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {skills.map((skill, index) => (
-              
-              <div key={index} className="space-y-3">
-                
-                <div className="flex justify-between items-center">
-                  
-                  <span className="font-medium text-foreground">{skill.name}</span>
-                  
-                  <span className="text-sm text-muted-foreground">
-                    
+              <div
+                key={index}
+                className='space-y-3'
+              >
+                <div className='flex justify-between items-center'>
+                  <span className='font-medium text-foreground'>{skill.name}</span>
+
+                  <span className='text-sm text-muted-foreground'>
                     {isVisible ? animatedLevels[index] : 0}%
-                  
                   </span>
                 </div>
 
-                <Progress 
+                <Progress
                   value={isVisible ? animatedLevels[index] : 0}
-                  className="h-2 transition-all duration-1000 ease-out"
+                  className='h-2 transition-all duration-1000 ease-out'
                 />
               </div>
             ))}
