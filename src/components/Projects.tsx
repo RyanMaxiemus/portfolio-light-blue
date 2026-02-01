@@ -15,7 +15,7 @@ const projects = [
     title: 'VoxInterview',
     description:
       'Your voice-first AI interview coach. Get real-time, data-driven feedback on your spoken answers to role-specific questions, powered by Gemini AI and ElevenLabs TTS.',
-    image: 'src/assets/images/voxinterview-screenshot.png',
+    image: '/assets/images/voxinterview-screenshot.png',
     techStack: ['React', 'Vite', 'Express', 'Gemini API', 'ElevenLabs API'],
     liveDemo: 'https://RyanMaxie.tech/VoxInterview',
     github: 'https://github.com/RyanMaxiemus/voxinterview'
@@ -24,7 +24,7 @@ const projects = [
     title: 'AI Learning Tutor',
     description:
       'An intelligent, adaptive learning assistant that transforms any subject into a personalized curriculum, powered by local LLMs via Ollama.',
-    image: 'src/assets/images/ai-learning-tutor-screenshot.png',
+    image: '/assets/images/ai-learning-tutor-screenshot.png',
     techStack: [
       'Python',
       'Streamlit',
@@ -40,7 +40,7 @@ const projects = [
     title: 'Recon Buddy AI (RBA)',
     description:
       'Automated reconnaissance and port scanning, summarized by a local AI model, so you can stop parsing raw terminal output.',
-    image: 'src/assets/images/recon-buddy-ai-screenshot.png',
+    image: '/assets/images/recon-buddy-ai-screenshot.png',
     techStack: [
       'Python',
       'Ollama',
@@ -57,7 +57,7 @@ const projects = [
     title: 'Genny The Generator',
     description:
       'A sleek desktop application that transforms raw text into polished Markdown for seamless content creation, powered by Gemini 2.0 Flash AI.',
-    image: 'src/assets/images/genny-the-generator-screenshot.png',
+    image: '/assets/images/genny-the-generator-screenshot.png',
     techStack: ['HTML/CSS/JavaScript', 'Electron', 'Gemini API'],
     liveDemo: 'https://github.com/RyanMaxiemus/genny-the-ai-markdown-generator',
     github: 'https://github.com/RyanMaxiemus/genny-the-ai-markdown-generator'
