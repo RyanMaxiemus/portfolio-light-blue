@@ -2,16 +2,16 @@ import { Progress } from '@/components/ui/progress';
 import { useEffect, useRef, useState } from 'react';
 
 const skills = [
-  { name: 'JavaScript/TypeScript', level: 90 },
-  { name: 'React/Vite', level: 85 },
-  { name: 'Node.js/Express', level: 85 },
+  { name: 'JavaScript/TypeScript', level: 85 },
+  { name: 'React/Vite', level: 70 },
+  { name: 'Node.js/Express', level: 75 },
   { name: 'Python/FastAPI', level: 80 },
   { name: 'Gemini API', level: 85 },
-  { name: 'Ollama', level: 80 },
-  { name: 'Open API', level: 75 },
+  { name: 'Ollama', level: 90 },
+  { name: 'Open API', level: 90 },
   { name: 'AWS/Cloud Services', level: 75 },
-  { name: 'Docker/DevOps', level: 80 },
-  { name: 'Git/GitHub', level: 95 }
+  { name: 'Docker/DevOps', level: 75 },
+  { name: 'Git/GitHub', level: 90 }
 ];
 
 export function Skills() {
