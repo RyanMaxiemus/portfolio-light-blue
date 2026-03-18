@@ -8,7 +8,7 @@ const skills = [
   { name: 'Python/FastAPI', level: 80 },
   { name: 'Gemini API', level: 85 },
   { name: 'Ollama', level: 90 },
-  { name: 'Open API', level: 90 },
+  { name: 'OpenAI API', level: 90 },
   { name: 'AWS/Cloud Services', level: 75 },
   { name: 'Docker/DevOps', level: 75 },
   { name: 'Git/GitHub', level: 90 }
